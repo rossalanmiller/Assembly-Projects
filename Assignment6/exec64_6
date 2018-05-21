@@ -1,0 +1,20 @@
+#!/bin/bash
+# My first script
+
+nasm -f elf driver6.asm
+nasm -f elf Miller_sub1.asm
+nasm -f elf Miller_sub2.asm
+nasm -f elf Miller_sub3.asm
+nasm -f elf printArray.asm
+
+gcc -m32 driver6.o Miller_sub1.o Miller_sub2.o Miller_sub3.o printArray.o -o mil6_exe
+
+./mil6_exe
+
+rm driver6.o
+rm Miller_sub1.o
+rm Miller_sub2.o
+rm Miller_sub3.o
+rm printArray.o
+
+echo "Script Complete"

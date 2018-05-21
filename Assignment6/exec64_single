@@ -1,0 +1,14 @@
+#!/bin/bash
+# My first script
+
+nasm -f elf $1.asm
+
+
+gcc -m32 $1.o -o $1_exe
+
+./$1_exe
+
+rm $1.o
+rm $1_exe
+
+echo "Script Complete"

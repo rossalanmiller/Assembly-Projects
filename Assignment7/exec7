@@ -1,0 +1,12 @@
+#!/bin/bash
+# My first script
+
+nasm -f elf Miller_assignment7.asm
+
+
+gcc  Miller_assignment7.o -o Mil7_exe
+./Mil7_exe
+
+rm Miller_assignment7.o
+rm Mil7_exe
+echo "Script Complete"
